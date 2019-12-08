@@ -1,0 +1,59 @@
+.has-text-left {
+    text-align: left;
+}
+
+.has-text-center {
+    text-align: center;
+}
+
+.has-text-right {
+    text-align: right;
+}
+
+.has-text-white {
+    color: $white;
+}
+
+.has-text-black {
+    color: #000;
+}
+
+.has-text-grey {
+    color: $text;
+}
+
+.has-text-grey-light {
+    color: $text-light;
+}
+
+.has-text-grey-dark {
+    color: $text-dark;
+}
+
+.has-font-size-body {
+    font-size: 1rem;
+}
+
+.has-text-primary {
+    color: $purple;
+}
+
+.has-text-secondary {
+    color: $green;
+}
+
+.has-text-uppercase {
+    text-transform: uppercase;
+}
+
+.has-font-weight-bold {
+    font-weight: bold;
+}
+
+.has-font-weight-normal {
+    font-weight: normal;
+}
+
+.has-font-weight-light {
+    font-weight: lighter;
+}

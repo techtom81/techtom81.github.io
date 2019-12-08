@@ -1,0 +1,13 @@
+.ReactModalPortal {
+    .ril__toolbar {
+        justify-content: flex-end;
+
+        .ril-toolbar-left {
+            margin-right: spacer(9);
+
+            .ril-toolbar__item__child {
+                font-size: 0.875rem;
+            }
+        }
+    }
+}

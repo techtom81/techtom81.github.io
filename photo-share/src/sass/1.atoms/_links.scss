@@ -1,0 +1,28 @@
+a {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.125rem;
+    text-decoration: none;
+    transition: color 0.4s ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: hsl(0, 0%, 80%);
+    }
+
+    &.has-text-primary {
+        &:hover,
+        &:focus,
+        &:active {
+            color: hsl(317, 36%, 35%);
+        }
+    }
+
+    &.has-text-secondary {
+        &:hover,
+        &:focus,
+        &:active {
+            color: hsl(192, 80%, 35%);
+        }
+    }
+}

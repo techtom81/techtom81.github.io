@@ -1,0 +1,55 @@
+.aspect-ratio-container {
+    position: relative;
+
+    &:before {
+        display: block;
+        content: '';
+        width: 100%;
+    }
+
+    > .aspect-ratio-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+
+        &.has-zoom {
+            .media-cover {
+                transform: scale3d(1, 1, 1);
+                perspective: 1px;
+                transition: transform 0.6s ease-in-out;
+            }
+            button {
+                &:hover,
+                &:focus,
+                &:active {
+                    .media-cover {
+                        transform: scale3d(1.08, 1.08, 1.08);
+                    }
+                }
+            }
+        }
+    }
+
+    @each $name, $aspect-ratio in $aspect-ratios {
+        &.is-#{$name}:not(.is-portrait) {
+            &:before {
+                padding-top: (
+                        map-deep-get($aspect-ratios, $name, height) / map-deep-get($aspect-ratios, $name, width)
+                    ) *
+                    100%;
+            }
+        }
+
+        &.is-#{$name}.is-portrait {
+            &:before {
+                padding-top: (
+                        map-deep-get($aspect-ratios, $name, width) / map-deep-get($aspect-ratios, $name, height)
+                    ) *
+                    100%;
+            }
+        }
+    }
+}

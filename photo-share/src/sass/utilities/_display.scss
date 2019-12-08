@@ -1,0 +1,83 @@
+.is-d-none {
+    display: none;
+}
+
+.is-d-block {
+    display: block;
+}
+
+.is-inline-block {
+    display: inline-block;
+}
+
+.is-d-inline {
+    display: inline;
+}
+
+.is-d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.is-d-flex-inline {
+    display: inline-flex;
+}
+
+.is-flex-column {
+    flex-direction: column;
+}
+
+.is-justify-center {
+    justify-content: center;
+}
+
+.is-justify-start {
+    justify-content: flex-start;
+}
+
+.is-justify-end {
+    justify-content: flex-end;
+}
+
+.is-justify-between {
+    justify-content: space-between;
+}
+
+.is-justify-around {
+    justify-content: space-around;
+}
+
+.is-align-center {
+    align-items: center;
+}
+
+.is-align-start {
+    align-items: flex-start;
+}
+
+.is-align-end {
+    align-items: flex-end;
+}
+
+@each $key, $breakpoint in $breakpoints {
+    .is-d-#{$key}-block {
+        @include min(bp(#{$key})) {
+            display: block;
+        }
+    }
+    .is-d-#{$key}-inline {
+        @include min(bp(#{$key})) {
+            display: inline;
+        }
+    }
+    .is-d-#{$key}-flex {
+        @include min(bp(#{$key})) {
+            display: flex;
+        }
+    }
+    .is-d-#{$key}-none {
+        @include min(bp(#{$key})) {
+            display: none;
+        }
+    }
+}
